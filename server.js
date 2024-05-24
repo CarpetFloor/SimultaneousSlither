@@ -23,7 +23,12 @@ let games = [];
 
 // handle users
 io.on("connection", (socket) => {
-    io.to(socket.id).emit("connected", socket.id);
+    socket.on("create game", () => {
+        let game = new Game(socket.id);
+        game.players.push(socket.id);
+
+        games.push(game);
+    })
 
     socket.on("disconnect", () => {
         let a = 5;

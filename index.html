@@ -14,11 +14,18 @@
     <section class="landing container">
         <h1>Simultaneous Slither</h1>
         <section>
-            <button>Create Game</button>
-            <button>Join Game</button>
+            <button id="createGame">Create Game</button>
+            <button id="joinGame">Join Game</button>
         </section>
     </section>
 
+    <section class="gameContainer container">
+        <section class="gameMessage">
+            <p>Waiting for someone else to join</p>
+        </section>
+
+        <section class="game"></section>
+    </section>
 
     <!-- show everything once loaded -->
     <script>
@@ -29,5 +36,7 @@
             document.querySelector(".landing").style.marginTop = "5em";
         }, 200);
     </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
