@@ -12,10 +12,22 @@
 </head>
 <body>
     <section class="landing container">
+        <h1>Simultaneous Slither</h1>
         <section>
             <button>Create Game</button>
             <button>Join Game</button>
         </section>
     </section>
+
+
+    <!-- show everything once loaded -->
+    <script>
+        document.querySelector(".landing").style.display = "flex";
+        
+        window.setTimeout(function() {
+            document.querySelector(".landing").style.opacity = "1";
+            document.querySelector(".landing").style.marginTop = "5em";
+        }, 200);
+    </script>
 </body>
 </html>

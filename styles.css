@@ -1,10 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 :root {
     --bg: rgb(240, 240, 240);
     --black: rgb(40, 40, 40);
+    --green: #A3E4D7;
+    --greenHover: #73C6B6;
+    --delay: 0.2s;
 }
 
 html {
     background-color: var(--bg);
     color: var(--black);
     font-size: 17px;
+}
+
+* {
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+}
+
+.landing {
+    opacity: 0;
+    display: none;
+    margin-top: -100vh;
+    transition: all 0.2s;
+    justify-content: center;
+    text-align: center;
+}
+
+.landing h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    transform: translateX(-3%);
+    margin-bottom: 2em;
+}
+
+.landing section {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    justify-content: space-evenly;
+}
+
+.landing section button {
+    outline: none;
+    border: 2px solid var(--black);
+    background-color: var(--green);
+    color: var(--black);
+    border-radius: 5px;
+    padding: 0.5em;
+    transition: all var(--delay);
+}
+.landing section button:hover {
+    cursor: pointer;
+    background-color: var(--greenHover);
+    border-color: var(--greenHover);
+}
+
+.landing section button:first-of-type {
+    margin-right: 1em;
 }

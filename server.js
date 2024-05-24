@@ -7,10 +7,10 @@ const io = new Server(server);
 const port = process.env.PORT || 8081;
 
 // add static file(s)
-app.use(express.static(__dirname + "/Client"));
+app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname);
+    res.sendFile("/index.html");
 });
 
 function Game(id) {
