@@ -1,0 +1,10 @@
+:root {
+    --bg: rgb(240, 240, 240);
+    --black: rgb(40, 40, 40);
+}
+
+html {
+    background-color: var(--bg);
+    color: var(--black);
+    font-size: 17px;
+}
